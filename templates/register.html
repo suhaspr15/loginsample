@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        .inline-label {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="read/" method="post">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="18" max="120">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required> <label for="male" class="inline-label">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required> <label for="female" class="inline-label">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required> <label for="other" class="inline-label">Other</label>
+            <br><br>
+
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">--select--</option>
+                <option >Karnataka</option>
+                <option >Andra Pradesh</option>
+                <option >Telangana</option>
+                <option >Tamil Nadu</option>
+
+            </select>
+
+            <label for="bg">Blood Group:</label>
+            <select id="bg" name="bg" required>
+                <option value="">--select--</option>
+                <option >O+ve</option>
+                <option >B+ve</option>
+                <option >AB+ve</option>
+                <option >O-ve</option>
+                <option >B-ve</option>
+                <option >AB-ve</option>
+
+            </select>
+
+            <label>Qualification:</label>
+            <input type="checkbox" id="sslc" name="qualification" value="sslc"> <label for="sslc" class="inline-label">SSLC</label>
+            <input type="checkbox" id="degree" name="qualification" value="degree"> <label for="degree" class="inline-label">Degree</label>
+            <input type="checkbox" id="pg" name="qualification" value="pg"> <label for="pg" class="inline-label">PG</label>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
